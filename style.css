@@ -1,0 +1,276 @@
+/* Base Reset & Professional Theme Variable Controls */
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --border-color: #334155;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-blue: #2563eb;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+    --cui-color: #78350f;
+    --cui-bg: #fef3c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* Security Banners */
+.cui-banner {
+    background-color: var(--cui-bg);
+    color: var(--cui-color);
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 0;
+    letter-spacing: 1px;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Gateway Portal Container styling */
+.access-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.access-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.portal-header h1 {
+    font-size: 1.75rem;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.portal-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.security-tag {
+    display: inline-block;
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* Form Controls */
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#passcodeField {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    text-align: center;
+    outline: none;
+}
+
+#passcodeField:focus {
+    border-color: var(--accent-blue);
+}
+
+#accessBtn {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#accessBtn:hover {
+    background-color: #1d4ed8;
+}
+
+.status-monitor {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+/* Dashboard Layout */
+.dashboard-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.dashboard-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 40px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.user-badge {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.welcome-panel {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.welcome-panel h2 {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.welcome-panel p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Module Control Cards Grid */
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.module-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.module-card:hover {
+    transform: translateY(-2px);
+    border-color: #475569;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-card h3 {
+    font-size: 1.2rem;
+}
+
+.status-indicator {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.status-indicator.active {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--accent-green);
+}
+
+.module-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.launch-btn {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.launch-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.99); }
+    to { opacity: 1; transform: scale(1); }
+}
