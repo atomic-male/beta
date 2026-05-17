@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="access-container">
+        <header>
+            <div class="security-tag">RESTRICTED ACCESS</div>
+            <h1>Administrator Entry</h1>
+        </header>
+
+        <div class="input-area">
+            <input type="password" id="passcodeField" placeholder="ENTER PASSCODE" autocomplete="off">
+            <button id="accessBtn">Authorize</button>
+        </div>
+
+        <footer id="status" class="status-monitor">AWAITING INPUT</footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
